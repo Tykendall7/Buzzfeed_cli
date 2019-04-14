@@ -12,6 +12,7 @@ def initialize(name, summary)
 
  def self.all
    @@all
+
  end
 
 

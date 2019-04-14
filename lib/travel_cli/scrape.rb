@@ -14,7 +14,7 @@ class TravelCli::Scrape
         Nokogiri::HTML(open(URL)).css('.subbuzz').each do |place|
           TravelCli::Place.new(
             place.css('.js-subbuzz__title-text').text.strip,
-            place.css('.subbuzz__description').text.strip)
+            place.css('.subbuzz__description').text)
         end
         #binding.pry
         # => [to look at everything you will put TravelCli::Place.all into pry
